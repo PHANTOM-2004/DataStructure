@@ -2,4 +2,6 @@
 *.in
 *.out
 *.txt
+*.7z
+*.zip
 .vscode
