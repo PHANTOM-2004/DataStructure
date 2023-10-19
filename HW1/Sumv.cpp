@@ -1,7 +1,7 @@
+#include <cstring>
 #include <iostream>
 #include <vector>
-
-#define maxn 500
+// 58013091638256722670150
 struct Biginteger {
   int length;
   std::vector<int> num;
@@ -79,25 +79,17 @@ Biginteger operator/(Biginteger a, int b) {
   c.flatten(a.length);
   return c;
 }
-
+int n, A;
 int main() {
-  using ll = long long;
-  ll a = 112312377127;
-  int b = 123124;
-  Biginteger A(a), B(b), C;
-  C = A * B;
-  C.print();
-  std::cout << '\n';
-  std::cout << a * b << '\n';
-
-  C = A + B;
-  C.print();
-  std::cout << '\n';
-  std::cout << a + b << '\n';
-
-  C = A / b;
-  C.print();
-  std::cout << '\n';
-  std::cout << a / b << '\n';
+  // freopen("in.in", "r", stdin);
+  while (scanf("%d%d", &n, &A) != EOF) {
+    Biginteger ans = 0, base = 1;
+    for (int i = 1; i <= n; i++) {
+      base = base * A;
+      ans = ans + base * i;
+    }
+    ans.print();
+    printf("\n");
+  }
   return 0;
 }

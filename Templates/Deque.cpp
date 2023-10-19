@@ -98,4 +98,20 @@ int main() {
     Q.pop_back();
   }
   std::cout << Q.size();
+  std::cout<<"__________________\n";
+   for(int i=0;i<200;i++)
+    Q.push_back(i);   
+   for (int i = 0; !Q.empty(); i++) {
+    std::cout << Q.back() << ' '<<Q.front()<<'\n';
+    Q.pop_back();
+  }
+
+   std::cout << Q.size();
+  std::cout<<"__________________\n";
+   for(int i=0;i<200;i++)
+    Q.push_front(i);   
+   for (int i = 0; !Q.empty(); i++) {
+    std::cout << Q.front() << ' '<<Q.back()<<'\n';
+    Q.pop_front();
+  }
 }

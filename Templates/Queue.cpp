@@ -63,4 +63,12 @@ int main() {
     std::cout << Q.front() << '\n';
     Q.pop();
   }
+  std::cout<<"-------------------------\n";
+
+  for(int i=0;i<200;i++)
+    Q.push(i);   
+   for (int i = 0; !Q.empty(); i++) {
+    std::cout << Q.front() << '\n';
+    Q.pop();
+  }
 }
