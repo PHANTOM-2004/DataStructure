@@ -89,7 +89,7 @@ Hash Solution;
 int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
-  freopen("input4.txt", "r", stdin);
+  // freopen("input4.txt", "r", stdin);
   Solution.solve();
   return 0;
 }
