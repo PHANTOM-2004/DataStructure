@@ -17,3 +17,5 @@ bin/
 .cache/
 .vs/
 out/
+cmake*/
+*build/
