@@ -129,4 +129,22 @@ void quickSort(T *const elem, const int low, const int high) {
   quickSort(elem, mid + 1, high);
 }
 
+template <typename T>
+void shellSort(T *const elem, const int low, const int high) {
+  if (high - low < 2)
+    return;
+  for (int d = INT_MAX; d > 0; d >>= 1) {
+    // 步长为 d，矩阵宽度为d
+    for (int j = low + d; j < high; j++) {
+      const auto x = elem[j];
+      int i{j};
+      while (i - d >= low && elem[i - d] > x) {
+        elem[i] = elem[i - d];
+        i -= d;
+      }
+      elem[i] = x;
+    }
+  }
+}
+
 } // namespace sort_impl
